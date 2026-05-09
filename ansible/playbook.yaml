@@ -1,0 +1,21 @@
+---
+- name: Rename and packages installation
+  hosts: all
+  roles:
+    - role: default_packages
+  tags:
+    - install_packages
+
+- name: Proxy
+  hosts: proxy
+  roles:
+    - role: proxy
+  tags:
+    - proxy
+
+- name: Webserver
+  hosts: webserver
+  roles:
+    - role: webserver
+  tags:
+    - webserver

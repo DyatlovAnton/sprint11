@@ -1,0 +1,10 @@
+#SPDX-License-Identifier: MIT-0
+---
+# handlers file for proxy
+- name: Nginx Reloader
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+    enabled: yes
+  become: yes
+  listen: "Nginx Reloader"
